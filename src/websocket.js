@@ -21,7 +21,7 @@ export const websocket = {
     //初始websocket
     initWebsocket() {
       const store = useStore()
-      this.socket = new SockJS('http://system-to-order.herokuapp.com/ws')
+      this.socket = new SockJS('https://system-to-order.herokuapp.com/ws')
       this.stompClient = Stomp.over(this.socket)
       this.stompClient.connect(
         // headers头部信息。可添加客户端的认证信息。也可以不添加信息，headers 直接就设置为 {}
